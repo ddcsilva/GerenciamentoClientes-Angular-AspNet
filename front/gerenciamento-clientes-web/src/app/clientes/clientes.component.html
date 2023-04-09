@@ -1,0 +1,30 @@
+<h2>Adicionar Cliente</h2>
+<form (submit)="adicionarCliente()">
+  <div>
+    <label>Nome:</label>
+    <input type="text" [(ngModel)]="novoCliente.nome" name="nome">
+  </div>
+  <div>
+    <label>CPF:</label>
+    <input type="text" [(ngModel)]="novoCliente.cpf" name="cpf">
+  </div>
+  <div>
+    <label>Data de Nascimento:</label>
+    <input type="text" [(ngModel)]="novoCliente.dataNascimento" name="dataNascimento">
+  </div>
+  <div>
+    <label>Celular:</label>
+    <input type="text" [(ngModel)]="novoCliente.celular" name="celular">
+  </div>
+  <div>
+    <label>Email:</label>
+    <input type="text" [(ngModel)]="novoCliente.email" name="email">
+  </div>
+  <button type="submit">Adicionar</button>
+</form>
+
+<ul>
+    <li *ngFor="let cliente of clientes">
+        {{ cliente.nome }} - {{ cliente.cpf }}
+    </li>
+</ul>
